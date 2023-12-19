@@ -20,14 +20,12 @@ class ChampionsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_champions, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        // Placer le code de notification ici
         val notificationBuilder = NotificationCompat.Builder(requireContext(), channelId)
             .setSmallIcon(R.drawable.baseline_circle_notifications_24)
             .setContentTitle("Félicitations!")
@@ -37,20 +35,19 @@ class ChampionsFragment : Fragment() {
 
         val notificationManager = NotificationManagerCompat.from(requireContext())
 
-        // Demander la permission POST_NOTIFICATIONS si elle n'est pas déjà accordée
+        // Demande de permission POST_NOTIFICATIONS
         if (ActivityCompat.checkSelfPermission(
                 requireContext(),
                 Manifest.permission.POST_NOTIFICATIONS
             ) != PackageManager.PERMISSION_GRANTED
         ) {
-            // Si la permission n'est pas accordée, demandez-la
             ActivityCompat.requestPermissions(
                 requireActivity(),
                 arrayOf(Manifest.permission.POST_NOTIFICATIONS),
                 1
             )
         } else {
-            // Si la permission est déjà accordée, affichez la notification
+            // Affichage de la notification
             notificationManager.notify(notificationId, notificationBuilder.build())
         }
     }
