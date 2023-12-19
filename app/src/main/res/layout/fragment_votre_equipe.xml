@@ -1,0 +1,73 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/coupe_ldc"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/votreEquipeFragment"
+        android:layout_width="match_parent"
+        android:layout_height="84dp"
+        android:gravity="center"
+        android:text="Votre Équipe"
+        android:textColor="#FEFEFE"
+        android:textSize="50sp"
+        android:typeface="serif"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"/>
+
+    <ScrollView
+        android:id="@+id/playerListScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/player_list_scrollview_description">
+
+        <TableLayout
+            android:id="@+id/tableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FF0000">
+
+            <TableRow
+                android:id="@+id/playerListContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/darker_gray">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Joueur"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:background="@drawable/table_background"
+                    android:padding="8dp"
+                    android:layout_margin="1dp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Note"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:background="@drawable/table_background"
+                    android:padding="8dp"
+                    android:layout_margin="1dp"/>
+            </TableRow>
+
+        </TableLayout>
+
+    </ScrollView>
+
+</LinearLayout>

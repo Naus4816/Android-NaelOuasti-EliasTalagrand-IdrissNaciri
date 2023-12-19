@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nouvelle_partie"
+        android:title="NouvellePartie"
+        android:icon="@drawable/nouvelle_partie"/>
+    <item
+        android:id="@+id/match"
+        android:title="Match"
+        android:icon="@drawable/baseline_stadium_24"/>
+    <item
+        android:id="@+id/competition"
+        android:title="Competition"
+        android:icon="@drawable/match"/>
+    <item
+        android:id="@+id/votre_equipe"
+        android:title="VotreEquipe"
+        android:icon="@drawable/team"/>
+</menu>

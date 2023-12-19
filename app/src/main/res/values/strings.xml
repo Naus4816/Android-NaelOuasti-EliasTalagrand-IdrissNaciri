@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- res/values/strings.xml -->
+        <string name="player_list_scrollview_description">Liste des joueurs</string>
+</resources>
